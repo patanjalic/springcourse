@@ -1,4 +1,5 @@
 /target/
+org.eclipse.jdt.core.prefs
 /bin/
 .classpath
 .springBeans
