@@ -1,0 +1,13 @@
+download mysqlworkbench
+download mysqlserver community edition
+put these two aliases to stop and start server
+alias mstart='sudo /usr/local/mysql/support-files/mysql.server start'
+alias mstop='sudo /usr/local/mysql/support-files/mysql.server stop'
+during installation of server mysql will give a temporary passwork, save it in notepad
+
+go to /usr/local/mysql/bin/
+start mysql with ./mysql -u root
+give below command
+ALTER USER USER() IDENTIFIED BY 'roo';
+test its working with select 1;
+ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
