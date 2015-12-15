@@ -1,8 +1,9 @@
 package com.patanjali.web.dao;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+
+import com.patanjali.web.validation.ValidEmail;
 
 public class Offer {
 	private int id;
@@ -11,7 +12,8 @@ public class Offer {
 	private String name;
 
 	@NotNull
-	@Pattern(regexp=".*\\@.*\\..*", message="This is not a valid email address")
+	//@Pattern(regexp=".*\\@.*\\..*", message="This is not a valid email address")
+	@ValidEmail(min=6, message="this is not a valid email address")
 	private String email;
 	
 	@Size(min=20, max=255, message="Text must be between 20 to 255 characters")
