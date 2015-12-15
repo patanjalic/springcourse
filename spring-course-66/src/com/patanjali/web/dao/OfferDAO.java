@@ -7,6 +7,7 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -42,8 +43,8 @@ public class OfferDAO {
 			
 		});
 	}
-	
-	Offer getOffers(int id) {
+
+	public Offer getOffers(int id) {
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("id", id);
